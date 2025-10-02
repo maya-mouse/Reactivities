@@ -2,7 +2,6 @@ import axios from "axios";
 import { store } from "../stores/store";
 import { toast } from "react-toastify";
 import { router } from "../../app/router/Routes";
-import { Details } from "@mui/icons-material";
 
 const sleep = (delay: number) => {
     return new Promise(resolve =>{
@@ -11,7 +10,8 @@ const sleep = (delay: number) => {
 }
 
 const agent = axios.create({
-    baseURL: import.meta.env.VITE_API_URL
+    baseURL: import.meta.env.VITE_API_URL,
+    withCredentials: true
 });
 
 agent.interceptors.request.use(config =>{
