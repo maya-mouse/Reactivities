@@ -1,6 +1,6 @@
 
-import { Button, Card, CardActions, CardContent, CardMedia, Grid2, Typography } from "@mui/material"
-import { Link, useParams } from "react-router";
+import { Grid2, Typography } from "@mui/material"
+import { useParams } from "react-router";
 import { useNavigate } from "react-router";
 import { useActivities } from "../../../lib/hooks/useActivities";
 import ActivityDetailsHeader from "./ActivityDetailsHeader";
@@ -28,7 +28,7 @@ export default function ActivityDetailPage() {
           <ActivityDetailsChat />
         </Grid2>
         <Grid2 size={4}>
-          <ActivityDetailsSidebar />
+          <ActivityDetailsSidebar activity={activity} />
         </Grid2>
       </Grid2>
   )
