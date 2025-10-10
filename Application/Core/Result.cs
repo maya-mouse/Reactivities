@@ -1,4 +1,6 @@
 using System;
+using Domain;
+using MediatR;
 
 namespace Application.Core;
 
@@ -19,4 +21,5 @@ public class Result<T>
         Error = error,
         Code = code
     };
+    
 }
